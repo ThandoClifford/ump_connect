@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>umpConnect: Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212; /* Dark background color */
+            color: #ffffff; /* Light text color for contrast */
+            display: flex; /* To handle side navigation and content layout */
+        }
+
+        /* Side Navigation Menu */
+        .side-nav {
+            height: 100vh; /* Full height of the viewport */
+            width: 250px; /* Fixed width */
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #1e1e1e;
+            padding-top: 20px;
+        }
+
+        .side-nav .logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+        }
+
+        .side-nav img {
+            margin-left: -10px; /* Shift the logo a bit to the left */
+            width: auto;
+            height: 50px;
+        }
+
+        .side-nav .logo-text {
+            font-size: 24px; /* Same height as the logo */
+            margin-left: 10px; /* Space between logo and text */
+            color: #ffffff;
+        }
+
+        .side-nav input[type="text"] {
+            width: 80%;
+            padding: 10px;
+            margin: 20px 10%;
+            border: none;
+            border-radius: 5px;
+            background-color: #2a2a2a;
+            color: #ffffff;
+        }
+
+        .side-nav input[type="text"]::placeholder {
+            color: #cccccc;
+        }
+
+        .side-nav a {
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 20px;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+        }
+
+        .side-nav a i {
+            margin-right: 10px; /* Space between icon and text */
+            color: #0088cc; /* Darker blue color for the icon */
+            font-size: 1.2rem; /* Adjust size of the icon */
+        }
+
+        .side-nav a.active i {
+            color: #ffaa00; /* Orange color for active icon */
+        }
+
+        .side-nav a:hover i {
+            color: #ffaa00; /* Orange color on hover */
+        }
+
+        .side-nav a:hover {
+            background-color: #575757;
+            color: #f4f4f4;
+        }
+
+        /* Main Content Area */
+        .main-content {
+            margin-left: 250px; /* Leave space for the side navigation */
+         
+            flex-grow: 1;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 100px 20px;
+            background-color: #1c1c1c;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #d3d3d3;
+        }
+
+        .hero button {
+            background-color: #f4f4f4;
+            color: #121212;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            margin-top: 20px;
+        }
+
+        .hero button:hover {
+            background-color: #ddd;
+        }
+
+        section {
+            padding: 20px;
+            margin: 20px 0;
+            background-color: #2a2a2a;
+            border-radius: 10px;
+        }
+
+        .category {
+            margin-bottom: 5px;
+        }
+
+        .category h2 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #ffaa00; 
+        }
+
+        .tile-container {
+            display: flex;
+            overflow-x: auto;
+            gap: 10px;
+        }
+
+        .tile {
+            min-width: 200px;
+            background-color: #333;
+            border-radius: 8px;
+            overflow: hidden;
+            flex: 0 0 auto;
+        }
+
+        .tile img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .tile h3 {
+            font-size: 1.2rem;
+            margin: 10px;
+        }
+
+        .tile p {
+            font-size: 0.9rem;
+            margin: 10px;
+            color: #d3d3d3;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #1e1e1e;
+            color: #ffffff;
+        }
+
+        /* Responsive Layout */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Side Navigation -->
+    <div class="side-nav">
+        <!-- Logo Section with Text -->
+        <div class="logo-container">
+            <img src="logo.jpeg" alt="University Logo">
+            <span class="logo-text">umpConnect</span>
+        </div>
+
+        <!-- Search Bar -->
+        <input type="text" placeholder="Search...">
+
+        <!-- Navigation Links -->
+        <a href="#Home" class="active"><i class="fas fa-home"></i> Home</a>
+        <a href="#Discover"><i class="fas fa-compass"></i> Discover</a>
+        <a href="#live"><i class="fas fa-tv"></i> Live</a>
+
+
+        
+    </div>
+
+    <!-- Main Content -->
+    <div class="profile-icon">
+        <i class="fas fa-user-circle"></i>
+    </div>
+    <div class="main-content">
+        
+        
+
+           <div>
+                <section>
+                    <div class="category">
+                        <h2><i class="fas fa-calendar"></i> Campus Events</h2>
+                        <div class="tile-container">
+                            <div class="tile">
+                                <img src="logo.jpeg" alt="Event 1">
+                                <h3>Freshman Orientation</h3>
+                                <p>Welcome event for new students to get acquainted with campus life.</p>
+                            </div>
+                            <div class="tile">
+                                <img src="logo.jpeg" alt="Event 2">
+                                <h3>Annual Science Fair</h3>
+                                <p>Showcasing innovative science projects and research.</p>
+                            </div>
+                            <div class="tile">
+                                <img src="logo.jpeg" alt="Event 3">
+                                <h3>Career Fair</h3>
+                                <p>Opportunity to meet potential employers and explore career options.</p>
+                            </div>
+                            <div class="tile">
+                                <img src="logo.jpeg" alt="Event 4">
+                                <h3>Graduation Ceremony</h3>
+                                <p>Celebrate the achievements of our graduating students.</p>
+                            </div>
+                            <div class="tile">
+                                <img src="logo.jpeg" alt="Event 5">
+                                <h3>Homecoming Week</h3>
+                                <p>Festivities and activities to welcome alumni back to campus.</p>
+                            </div>
+                            <div class="tile">
+                                <img src="logo.jpeg" alt="Event 6">
+                                <h3>International Day</h3>
+                                <p>A celebration of global cultures and diversity.</p>
+                            </div>
+                            <div class="tile">
+                                <img src="logo.jpeg" alt="Event 7">
+                                <h3>Sports Day</h3>
+                                <p>Participate in various sports and recreational activities.</p>
+                            </div>
+                            <div class="tile">
+                                <img src="logo.jpeg" alt="Event 8">
+                                <h3>Spring Festival</h3>
+                                <p>Join us for a festival with music, food, and fun.</p>
+                            </div>
+                            <div class="tile">
+                                <img src="logo.jpeg" alt="Event 9">
+                                <h3>Talent Show</h3>
+                                <p>Showcase your talents and enjoy performances from fellow students.</p>
+                            </div>
+                            <div class="tile">
+                                <img src="logo.jpeg" alt="Event 10">
+                                <h3>Wellness Fair</h3>
+                                <p>Explore health and wellness resources available on campus.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+        
+                <section>
+                    <div class="category">
+                        <h2><i class="fas fa-sports"></i> Sports Events</h2>
+                        <div class="tile-container">
+                            <div class="tile">
+                                <img src="logo.jpeg" alt="Sports Event 1">
+                                <h3>Basketball Tournament</h3>
+                                <p>Exciting basketball games between university teams.</p>
+                            </div>
+                            <div class="tile">
+                                <img src="logo.jpeg" alt="Sports Event 2">
+                                <h3>Football Match: University vs. Rivals</h3>
+                                <p>Cheer on your team in this exciting football match.</p>
+                            </div>
+                            <div class="tile">
+                                <img src="logo.jpeg" alt="Sports Event 3">
+                                <h3>Track & Field Day</h3>
+                                <p>Join us for a day of athletic competitions.</p>
+                            </div>
+                            <div class="tile">
+                                <img src="logo.jpeg" alt="Sports Event 4">
+                                <h3>Swimming Gala</h3>
+                                <p>Watch the swimming events and cheer for the competitors.</p>
+                            </div>
+                            <div class="tile">
+                                <img src="logo.jpeg" alt="Sports Event 5">
+                                <h3>Tennis Tournament</h3>
+                                <p>Exciting matches in the university tennis tournament.</p>
+                            </div>
+                            <div class="tile">
+                                <img src="logo.jpeg" alt="Sports Event 6">
+                                <h3>Volleyball Championship</h3>
+                                <p>Don’t miss the thrilling volleyball finals.</p>
+                            </div>
+                            <div class="tile">
+                                <img src="logo.jpeg" alt="Sports Event 7">
+                                <h3>Yoga and Wellness Session</h3>
+                                <p>Join us for a relaxing yoga and wellness event.</p>
+                            </div>
+                            <div class="tile">
+                                <img src="logo.jpeg" alt="Sports Event 8">
+                                <h3>Cricket Match</h3>
+                                <p>Catch the action in the university cricket match.</p>
+                            </div>
+                            <div class="tile">
+                                <img src="logo.jpeg" alt="Sports Event 9">
+                                <h3>Badminton Tournament</h3>
+                                <p>Watch the intense badminton matches.</p>
+                            </div>
+                            <div class="tile">
+                                <img src="logo.jpeg" alt="Sports Event 10">
+                                <h3>Golf Club Championship</h3>
+                                <p>Follow the university golf championship.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+        
+                <section>
+                    <div class="category">
+                        <h2><i class="fas fa-music"></i> Music Events</h2>
+                        <div class="tile-container">
+                            <div class="tile">
+                                <img src="logo.jpeg" alt="Music Event 1">
+                                <h3>Spring Concert</h3>
+                                <p>Enjoy a variety of performances in the spring concert.</p>
+                            </div>
+                            <div class="tile">
+                                <img src="logo.jpeg" alt="Music Event 2">
+                                <h3>Jazz Night</h3>
+                                <p>Experience live jazz performances by talented artists.</p>
+                            </div>
+                            <div class="tile">
+                                <img src="logo.jpeg" alt="Music Event 3">
+                                <h3>Classical Music Recital</h3>
+                                <p>Listen to classical music played by the university orchestra.</p>
+                            </div>
+                            <div class="tile">
+                                <img src="logo.jpeg" alt="Music Event 4">
+                                <h3>Rock Band Night</h3>
+                                <p>Rock out with live performances from various bands.</p>
+                            </div>
+                            <div class="tile">
+                                <img src="logo.jpeg" alt="Music Event 5">
+                                <h3>Electronic Music Festival</h3>
+                                <p>Join us for a night of electronic music and DJ sets.</p>
+                            </div>
+                            <div class="tile">
+                                <img src="logo.jpeg" alt="Music Event 6">
+                                <h3>Choral Performance</h3>
+                                <p>Enjoy a performance by the university choir.</p>
+                            </div>
+                            <div class="tile">
+                                <img src="logo.jpeg" alt="Music Event 7">
+                                <h3>Acoustic Open Mic</h3>
+                                <p>Showcase your acoustic talents or enjoy performances by others.</p>
+                            </div>
+                            <div class="tile">
+                                <img src="logo.jpeg" alt="Music Event 8">
+                                <h3>Musical Theatre Production</h3>
+                                <p>Watch the latest musical theatre production by students.</p>
+                            </div>
+                            <div class="tile">
+                                <img src="logo.jpeg" alt="Music Event 9">
+                                <h3>Indie Music Festival</h3>
+                                <p>Discover new indie bands and artists at this festival.</p>
+                            </div>
+                            <div class="tile">
+                                <img src="logo.jpeg" alt="Music Event 10">
+                                <h3>Music Production Workshop</h3>
+                                <p>Learn about music production techniques and tools.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+        
+                <section>
+                    <div class="category">
+                        <h2><i class="fas fa-film"></i> Film Screenings</h2>
+                        <div class="tile-container">
+                            <div class="tile">
+                                <img src="logo.jpeg" alt="Film Screening 1">
+                                <h3>Documentary Premiere</h3>
+                                <p>Premiering a new documentary film.</p>
+                            </div>
+                            <div class="tile">
+                                <img src="logo.jpeg" alt="Film Screening 2">
+                                <h3>Student Short Films</h3>
+                                <p>A screening of short films created by students.</p>
+                            </div>
+                            <div class="tile">
+                                <img src="logo.jpeg" alt="Film Screening 3">
+                                <h3>Classic Film Night</h3>
+                                <p>Enjoy a screening of a classic film.</p>
+                            </div>
+                            <div class="tile">
+                                <img src="logo.jpeg" alt="Film Screening 4">
+                                <h3>International Film Festival</h3>
+                                <p>Screening of films from around the world.</p>
+                            </div>
+                            <div class="tile">
+                                <img src="logo.jpeg" alt="Film Screening 5">
+                                <h3>Student Film Awards</h3>
+                                <p>Celebrating the best student films of the year.</p>
+                            </div>
+                            <div class="tile">
+                                <img src="logo.jpeg" alt="Film Screening 6">
+                                <h3>Indie Film Showcase</h3>
+                                <p>A showcase of independent films.</p>
+                            </div>
+                            <div class="tile">
+                                <img src="logo.jpeg" alt="Film Screening 7">
+                                <h3>Film Night</h3>
+                                <p>Screening of independent films and shorts.</p>
+                            </div>
+                            <div class="tile">
+                                <img src="logo.jpeg" alt="Film Screening 8">
+                                <h3>Film Analysis Workshop</h3>
+                                <p>Participate in a workshop analyzing films.</p>
+                            </div>
+                            <div class="tile">
+                                <img src="logo.jpeg" alt="Film Screening 9">
+                                <h3>Animated Films Showcase</h3>
+                                <p>Enjoy a showcase of animated films.</p>
+                            </div>
+                            <div class="tile">
+                                <img src="logo.jpeg" alt="Film Screening 10">
+                                <h3>Documentary on University History</h3>
+                                <p>A film documenting the history of the university.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+        
+                <section>
+                    <div class="category">
+                        <h2><i class="fas fa-book-reader"></i> Library Events</h2>
+                        <div class="tile-container">
+                            <div class="tile">
+                                <img src="logo.jpeg" alt="Library Event 1">
+                                <h3>Author Talk: New Releases</h3>
+                                <p>Meet authors and discuss their latest books.</p>
+                            </div>
+                            <div class="tile">
+                                <img src="logo.jpeg" alt="Library Event 2">
+                                <h3>Book Fair</h3>
+                                <p>Explore books from various genres and authors.</p>
+                            </div>
+                            <div class="tile">
+                                <img src="logo.jpeg" alt="Library Event 3">
+                                <h3>Reading Hour</h3>
+                                <p>A special hour dedicated to reading and storytelling.</p>
+                            </div>
+                            <div class="tile">
+                                <img src="logo.jpeg" alt="Library Event 4">
+                                <h3>Book Club Meeting</h3>
+                                <p>Join a discussion on a selected book.</p>
+                            </div>
+                            <div class="tile">
+                                <img src="logo.jpeg" alt="Library Event 5">
+                                <h3>Library Orientation</h3>
+                                <p>Learn about the resources and services available in the library.</p>
+                            </div>
+                            <div class="tile">
+                                <img src="logo.jpeg" alt="Library Event 6">
+                                <h3>Research Workshop</h3>
+                                <p>Attend a workshop on research techniques and tools.</p>
+                            </div>
+                            <div class="tile">
+                                <img src="logo.jpeg" alt="Library Event 7">
+                                <h3>Poetry Reading</h3>
+                                <p>Listen to poetry readings by local and guest poets.</p>
+                            </div>
+                            <div class="tile">
+                                <img src="logo.jpeg" alt="Library Event 8">
+                                <h3>Author Meet and Greet</h3>
+                                <p>Meet authors and get your books signed.</p>
+                            </div>
+                            <div class="tile">
+                                <img src="logo.jpeg" alt="Library Event 9">
+                                <h3>Book Discussion Panel</h3>
+                                <p>Participate in a panel discussion about popular books.</p>
+                            </div>
+                            <div class="tile">
+                                <img src="logo.jpeg" alt="Library Event 10">
+                                <h3>Children’s Storytime</h3>
+                                <p>Enjoy a storytelling session for children.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+        
+                <section>
+                    <div class="category">
+                        <h2><i class="fas fa-guitar"></i> Campus Music</h2>
+                        <div class="tile-container">
+                            <div class="tile">
+                                <img src="logo.jpeg" alt="Campus Music 1">
+                                <h3>Live Band Performances</h3>
+                                <p>Catch live performances by student bands.</p>
+                            </div>
+                            <div class="tile">
+                                <img src="logo.jpeg" alt="Campus Music 2">
+                                <h3>Acoustic Sessions</h3>
+                                <p>Enjoy intimate acoustic music sessions.</p>
+                            </div>
+                            <div class="tile">
+                                <img src="logo.jpeg" alt="Campus Music 3">
+                                <h3>Music Workshops</h3>
+                                <p>Participate in workshops to enhance your musical skills.</p>
+                            </div>
+                            <div class="tile">
+                                <img src="logo.jpeg" alt="Campus Music 4">
+                                <h3>Open Mic Music Night</h3>
+                                <p>Showcase your musical talents in an open mic night.</p>
+                            </div>
+                            <div class="tile">
+                                <img src="logo.jpeg" alt="Campus Music 5">
+                                <h3>DJ Sets and Dance</h3>
+                                <p>Enjoy DJ performances and dance events.</p>
+                            </div>
+                            <div class="tile">
+                                <img src="logo.jpeg" alt="Campus Music 6">
+                                <h3>Student Composers Showcase</h3>
+                                <p>Listen to compositions created by student musicians.</p>
+                            </div>
+                            <div class="tile">
+                                <img src="logo.jpeg" alt="Campus Music 7">
+                                <h3>Campus Choir Performances</h3>
+                                <p>Watch performances by the university choir.</p>
+                            </div>
+                            <div class="tile">
+                                <img src="logo.jpeg" alt="Campus Music 8">
+                                <h3>Music Theory Lectures</h3>
+                                <p>Learn about music theory in dedicated lectures.</p>
+                            </div>
+                            <div class="tile">
+                                <img src="logo.jpeg" alt="Campus Music 9">
+                                <h3>Jazz Improv Night</h3>
+                                <p>Experience an evening of jazz improvisation.</p>
+                            </div>
+                            <div class="tile">
+                                <img src="logo.jpeg" alt="Campus Music 10">
+                                <h3>Band Jam Sessions</h3>
+                                <p>Join in on jam sessions with various student bands.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+        
+                <section>
+                    <div class="category">
+                        <h2><i class="fas fa-university"></i> Campus News</h2>
+                        <div class="tile-container">
+                            <div class="tile">
+                                <img src="logo.jpeg" alt="Campus News 1">
+                                <h3>University Expansion Plans</h3>
+                                <p>Details on the university's expansion projects.</p>
+                            </div>
+                            <div class="tile">
+                                <img src="logo.jpeg" alt="Campus News 2">
+                                <h3>New Faculty Announcements</h3>
+                                <p>Introduction of new faculty members.</p>
+                            </div>
+                            <div class="tile">
+                                <img src="logo.jpeg" alt="Campus News 3">
+                                <h3>Research Grants Awarded</h3>
+                                <p>News on recent research grants awarded to faculty and students.</p>
+                            </div>
+                            <div class="tile">
+                                <img src="logo.jpeg" alt="Campus News 4">
+                                <h3>Student Achievements</h3>
+                                <p>Highlighting notable achievements by students.</p>
+                            </div>
+                            <div class="tile">
+                                <img src="logo.jpeg" alt="Campus News 5">
+                                <h3>New Campus Facilities</h3>
+                                <p>Information on newly constructed or renovated facilities.</p>
+                            </div>
+                            <div class="tile">
+                                <img src="logo.jpeg" alt="Campus News 6">
+                                <h3>Upcoming Policy Changes</h3>
+                                <p>Updates on upcoming changes to university policies.</p>
+                            </div>
+                            <div class="tile">
+                                <img src="logo.jpeg" alt="Campus News 7">
+                                <h3>Community Engagement</h3>
+                                <p>News on community service and engagement activities.</p>
+                            </div>
+                            <div class="tile">
+                                <img src="logo.jpeg" alt="Campus News 8">
+                                <h3>Student Elections</h3>
+                                <p>Information on upcoming student elections and candidates.</p>
+                            </div>
+                            <div class="tile">
+                                <img src="logo.jpeg" alt="Campus News 9">
+                                <h3>Health and Safety Updates</h3>
+                                <p>Updates on health and safety protocols on campus.</p>
+                            </div>
+                            <div class="tile">
+                                <img src="logo.jpeg" alt="Campus News 10">
+                                <h3>Technology Enhancements</h3>
+                                <p>News on new technology and digital resources available to students.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+        
+                <section>
+                    <div class="category">
+                        <h2><i class="fas fa-theater-masks"></i> Campus Performances</h2>
+                        <div class="tile-container">
+                            <div class="tile">
+                                <img src="logo.jpeg" alt="Campus Performance 1">
+                                <h3>Theatrical Plays</h3>
+                                <p>Enjoy various theatrical productions by students and faculty.</p>
+                            </div>
+                            <div class="tile">
+                                <img src="logo.jpeg" alt="Campus Performance 2">
+                                <h3>Dance Recitals</h3>
+                                <p>Watch dance performances showcasing student talent.</p>
+                            </div>
+                            <div class="tile">
+                                <img src="logo.jpeg" alt="Campus Performance 3">
+                                <h3>Comedy Nights</h3>
+                                <p>Experience evenings of comedy performed by students.</p>
+                            </div>
+                            <div class="tile">
+                                <img src="logo.jpeg" alt="Campus Performance 4">
+                                <h3>Musical Theatre</h3>
+                                <p>Attend musical theatre performances produced by students.</p>
+                            </div>
+                            <div class="tile">
+                                <img src="logo.jpeg" alt="Campus Performance 5">
+                                <h3>Student Film Projects</h3>
+                                <p>Screenings of short films created by students.</p>
+                            </div>
+                            <div class="tile">
+                                <img src="logo.jpeg" alt="Campus Performance 6">
+                                <h3>Poetry Slams</h3>
+                                <p>Participate in or watch poetry slam events.</p>
+                            </div>
+                            <div class="tile">
+                                <img src="logo.jpeg" alt="Campus Performance 7">
+                                <h3>Improvisational Theatre</h3>
+                                <p>Enjoy improvised performances by the university drama group.</p>
+                            </div>
+                            <div class="tile">
+                                <img src="logo.jpeg" alt="Campus Performance 8">
+                                <h3>Concert Series</h3>
+                                <p>Attend a series of concerts featuring student musicians.</p>
+                            </div>
+                            <div class="tile">
+                                <img src="logo.jpeg" alt="Campus Performance 9">
+                                <h3>Art Exhibitions</h3>
+                                <p>View art exhibitions showcasing student and faculty artwork.</p>
+                            </div>
+                            <div class="tile">
+                                <img src="logo.jpeg" alt="Campus Performance 10">
+                                <h3>Film Festival</h3>
+                                <p>Watch a festival of films created by students and alumni.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+        
+                <section>
+                    <div class="category">
+                        <h2><i class="fas fa-laptop"></i> Tech Events</h2>
+                        <div class="tile-container">
+                            <div class="tile">
+                                <img src="logo.jpeg" alt="Tech Event 1">
+                                <h3>Tech Symposium</h3>
+                                <p>Explore the latest advancements in technology.</p>
+                            </div>
+                            <div class="tile">
+                                <img src="logo.jpeg" alt="Tech Event 2">
+                                <h3>Hackathon</h3>
+                                <p>Participate in a coding competition to solve tech problems.</p>
+                            </div>
+                            <div class="tile">
+                                <img src="logo.jpeg" alt="Tech Event 3">
+                                <h3>Innovation Expo</h3>
+                                <p>Showcasing innovative tech projects and startups.</p>
+                            </div>
+                            <div class="tile">
+                                <img src="logo.jpeg" alt="Tech Event 4">
+                                <h3>Tech Workshops</h3>
+                                <p>Attend workshops on various tech topics and tools.</p>
+                            </div>
+                            <div class="tile">
+                                <img src="logo.jpeg" alt="Tech Event 5">
+                                <h3>Guest Lectures</h3>
+                                <p>Listen to guest lectures by industry experts.</p>
+                            </div>
+                            <div class="tile">
+                                <img src="logo.jpeg" alt="Tech Event 6">
+                                <h3>Startup Pitch Night</h3>
+                                <p>Watch startups pitch their ideas to a panel of judges.</p>
+                            </div>
+                            <div class="tile">
+                                <img src="logo.jpeg" alt="Tech Event 7">
+                                <h3>Networking Events</h3>
+                                <p>Network with tech professionals and peers.</p>
+                            </div>
+                            <div class="tile">
+                                <img src="logo.jpeg" alt="Tech Event 8">
+                                <h3>Product Launches</h3>
+                                <p>Attend launches of new tech products and services.</p>
+                            </div>
+                            <div class="tile">
+                                <img src="logo.jpeg" alt="Tech Event 9">
+                                <h3>Cybersecurity Seminar</h3>
+                                <p>Learn about the latest in cybersecurity practices and threats.</p>
+                            </div>
+                            <div class="tile">
+                                <img src="logo.jpeg" alt="Tech Event 10">
+                                <h3>Artificial Intelligence Conference</h3>
+                                <p>Discuss developments and applications of AI technology.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+        
+                <section>
+                    <div class="category">
+                        <h2><i class="fas fa-briefcase"></i> Career Services</h2>
+                        <div class="tile-container">
+                            <div class="tile">
+                                <img src="logo.jpeg" alt="Career Service 1">
+                                <h3>Resume Building Workshop</h3>
+                                <p>Get tips on creating a standout resume.</p>
+                            </div>
+                            <div class="tile">
+                                <img src="logo.jpeg" alt="Career Service 2">
+                                <h3>Interview Preparation</h3>
+                                <p>Prepare for interviews with mock sessions and advice.</p>
+                            </div>
+                            <div class="tile">
+                                <img src="logo.jpeg" alt="Career Service 3">
+                                <h3>Career Counseling</h3>
+                                <p>Meet with career counselors to discuss career paths and goals.</p>
+                            </div>
+                            <div class="tile">
+                                <img src="logo.jpeg" alt="Career Service 4">
+                                <h3>Job Fairs</h3>
+                                <p>Meet potential employers at job fairs organized on campus.</p>
+                            </div>
+                            <div class="tile">
+                                <img src="logo.jpeg" alt="Career Service 5">
+                                <h3>Internship Opportunities</h3>
+                                <p>Explore internship opportunities available through the university.</p>
+                            </div>
+                            <div class="tile">
+                                <img src="logo.jpeg" alt="Career Service 6">
+                                <h3>Networking Events</h3>
+                                <p>Connect with professionals in your field at networking events.</p>
+                            </div>
+                            <div class="tile">
+                                <img src="logo.jpeg" alt="Career Service 7">
+                                <h3>Career Skills Workshops</h3>
+                                <p>Attend workshops to build essential career skills.</p>
+                            </div>
+                            <div class="tile">
+                                <img src="logo.jpeg" alt="Career Service 8">
+                                <h3>Industry Panels</h3>
+                                <p>Participate in panels with industry experts discussing trends and opportunities.</p>
+                            </div>
+                            <div class="tile">
+                                <img src="logo.jpeg" alt="Career Service 9">
+                                <h3>Job Search Strategies</h3>
+                                <p>Learn strategies for an effective job search.</p>
+                            </div>
+                            <div class="tile">
+                                <img src="logo.jpeg" alt="Career Service 10">
+                                <h3>Workshops for Entrepreneurs</h3>
+                                <p>Workshops designed for aspiring entrepreneurs.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+        
+            </main>
+        </body>
+        </html>
+        
