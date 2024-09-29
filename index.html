@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>umpConnect: Breadth of knowledge, at your fingertips</title>
+    <title>umpConnect: Home</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         /* General Styles */
@@ -11,20 +11,21 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #121212; /* Dark background color */
-            color: #ffffff; /* Light text color for contrast */
-            display: flex; /* To handle side navigation and content layout */
+            background-color: #121212; /* Dark background */
+            color: #ffffff; /* Light text */
+            display: flex;
         }
 
-        /* Side Navigation Menu */
+        /* Sidebar (Hamburger Menu) */
         .side-nav {
-            height: 100vh; /* Full height of the viewport */
-            width: 250px; /* Fixed width */
+            height: 100vh;
+            width: 250px;
             position: fixed;
             top: 0;
             left: 0;
             background-color: #1e1e1e;
             padding-top: 20px;
+            overflow-y: auto;
         }
 
         .side-nav .logo-container {
@@ -35,29 +36,14 @@
         }
 
         .side-nav img {
-            margin-left: -10px; /* Shift the logo a bit to the left */
             width: auto;
             height: 50px;
         }
 
         .side-nav .logo-text {
-            font-size: 24px; /* Same height as the logo */
-            margin-left: 10px; /* Space between logo and text */
+            font-size: 24px;
+            margin-left: 10px;
             color: #ffffff;
-        }
-
-        .side-nav input[type="text"] {
-            width: 80%;
-            padding: 10px;
-            margin: 20px 10%;
-            border: none;
-            border-radius: 5px;
-            background-color: #2a2a2a;
-            color: #ffffff;
-        }
-
-        .side-nav input[type="text"]::placeholder {
-            color: #cccccc;
         }
 
         .side-nav a {
@@ -71,136 +57,223 @@
         }
 
         .side-nav a i {
-            margin-right: 10px; /* Space between icon and text */
-            color: #00aaff; /* Blue color for the icon */
-            font-size: 1.2rem; /* Adjust size of the icon */
-        }
-
-        .side-nav a:hover i {
-            color: #ffaa00; /* Orange color on hover */
+            margin-right: 10px;
+            color: #00aaff;
         }
 
         .side-nav a:hover {
             background-color: #575757;
-            color: #f4f4f4;
         }
 
-        /* Main Content Area */
+        /* Main Content */
         .main-content {
-            margin-left: 250px; /* Leave space for the side navigation */
+            margin-left: 250px;
             padding: 20px;
             flex-grow: 1;
         }
 
-        .hero {
-            text-align: center;
-            padding: 100px 20px;
+        .post {
             background-color: #1c1c1c;
-        }
-
-        .hero h1 {
-            font-size: 3rem;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            color: #d3d3d3;
-        }
-
-        .hero button {
-            background-color: #f4f4f4;
-            color: #121212;
-            padding: 10px 20px;
-            border: none;
-            cursor: pointer;
-            font-size: 1rem;
-            margin-top: 20px;
-        }
-
-        .hero button:hover {
-            background-color: #ddd;
-        }
-
-        section {
-            padding: 20px;
-            margin: 20px 0;
-            background-color: #2a2a2a;
             border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            position: relative;
         }
 
-        footer {
-            text-align: center;
-            padding: 10px;
-            background-color: #1e1e1e;
+        .post-title {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
             color: #ffffff;
         }
 
-        /* Responsive Layout */
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-            
+        .post-description {
+            font-size: 1rem;
+            margin-bottom: 15px;
+            color: #d3d3d3;
         }
 
-        header {
-    background-color: #1e1e1e; /* Dark background for the header */
-    padding: 20px; /* Padding around the text */
-    text-align: center; /* Center the text horizontally */
-    color: #ffffff; /* White text color for contrast */
-    border-bottom: 2px solid #0088cc; /* Blue border at the bottom */
-    font-size: 1.5rem; /* Larger font size for the header text */
-    font-weight: bold; /* Make the text bold */
-}
+        .post-media img, .post-media video {
+            width: 100%;
+            max-height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
 
-header p {
-    margin: 0; /* Remove default margin */
-}
+        .post-date-time {
+            font-size: 0.8rem;
+            color: #aaaaaa;
+            margin-bottom: 10px;
+        }
 
+        /* Like Button and Counter */
+        .like-heart {
+            position: absolute;
+            bottom: 15px;
+            right: 20px;
+            font-size: 1.5rem;
+            color: transparent;
+            cursor: pointer;
+        }
+
+        .like-heart.active {
+            color: red;
+        }
+
+        .like-counter {
+            position: absolute;
+            bottom: 17px;
+            left: 750px;
+            font-size: 1rem;
+            color: #d3d3d3;
+        }
+
+        /* Like Heart Animation */
+        .like-heart-animation {
+            position: absolute;
+            bottom: 50px;
+            right: 20px;
+            font-size: 3rem;
+            color: red;
+            animation: pop 0.4s ease-in-out;
+        }
+
+        @keyframes pop {
+            0% {
+                transform: scale(0);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
     </style>
 </head>
 <body>
 
-    <header>
-            <p>Home</p>
-        </header>
     <!-- Side Navigation -->
     <div class="side-nav">
-        <!-- Logo Section with Text -->
         <div class="logo-container">
             <img src="logo.jpeg" alt="University Logo">
             <span class="logo-text">umpConnect</span>
         </div>
 
-        <!-- Search Bar -->
         <input type="text" placeholder="Search...">
-
-        <!-- Navigation Links -->
-        <a href="#Home"><i class="fas fa-home"></i> Home</a>
-        <a href="#Discover"><i class="fas fa-compass"></i> Discover</a>
-        <a href="#live"><i class="fas fa-tv"></i> Live</a>
+        <a href="index.html"><i class="fas fa-home"></i> Home</a>
+        <a href="discover.html"><i class="fas fa-compass"></i> Discover</a>
+        <a href="live.html"><i class="fas fa-video"></i> Live Campus Cam</a>
+        <a href="trending.html"><i class="fas fa-fire"></i> Trending Now</a>
+        <a href="competition.html"><i class="fas fa-gamepad"></i> Challenges & Competitions</a>
+        <a href="calender.html"><i class="fas fa-calendar-alt"></i> Events Calendar</a>
+        <a href="tickets.html"><i class="fas fa-ticket-alt"></i> Event Tickets</a>
+        <a href="polls.html"><i class="fas fa-poll"></i> Live Polls & Surveys</a>
+        <a href="jobs.html"><i class="fas fa-briefcase"></i> Jobs & Internships</a>
+        <a href="contact.html"><i class="fas fa-envelope"></i> Contact Us</a>
     </div>
 
-    <!-- Main Content -->
+    <!-- Main Content (Feed) -->
     <div class="main-content">
-        <!-- Hero Section -->
-        <section class="hero">
-            <h1>Welcome to the University Central System</h1>
-            <p>Your gateway to university life, events, and broadcasts.</p>
-            <button>Watch Live Broadcast</button>
-        </section>
+        <h1>Home Feed</h1>
 
-        <!-- Sample Section -->
-        <section id="broadcasts">
-            <h2>Live & Upcoming Broadcasts</h2>
-            <p>Catch all the latest university events live here.</p>
-        </section>
+        <!-- Post 1 -->
+        <div class="post" ondblclick="likePost(this)">
+            <h2 class="post-title">Event: Annual Cultural Festival</h2>
+            <p class="post-description">Join us for a night of fun, music, and cultural celebrations at the university amphitheater.</p>
+            <div class="post-media">
+                <img src="https://via.placeholder.com/600x400" alt="Cultural Event">
+            </div>
+            <p class="post-date-time">28 Sep 2024, 18:30</p>
+            <p class="like-counter">0</p>
+            <i class="fas fa-heart like-heart"></i>
+        </div>
 
-        <!-- Footer -->
-        <footer>
-            <p>&copy; 2024 University Central System. All Rights Reserved.</p>
-        </footer>
+        <!-- Post 2 -->
+        <div class="post" ondblclick="likePost(this)">
+            <h2 class="post-title">Campus Basketball Tournament</h2>
+            <p class="post-description">Witness the best of the best battle it out on the court! Don’t miss out!</p>
+            <div class="post-media">
+                <img src="https://via.placeholder.com/600x400" alt="Basketball Tournament">
+            </div>
+            <p class="post-date-time">26 Sep 2024, 15:00</p>
+            <p class="like-counter">0 </p>
+            <i class="fas fa-heart like-heart"></i>
+        </div>
+
+        <!-- Post 3 -->
+        <div class="post" ondblclick="likePost(this)">
+            <h2 class="post-title">Guest Lecture: The Future of AI</h2>
+            <p class="post-description">Join Professor Smith for an exciting talk on how AI is changing the world.</p>
+            <div class="post-media">
+                <img src="https://via.placeholder.com/600x400" alt="AI Lecture">
+            </div>
+            <p class="post-date-time">25 Sep 2024, 12:00</p>
+            <p class="like-counter">0 </p>
+            <i class="fas fa-heart like-heart"></i>
+        </div>
+
+        <!-- Post 4 -->
+        <div class="post" ondblclick="likePost(this)">
+            <h2 class="post-title">Food Fest 2024</h2>
+            <p class="post-description">Sample foods from all around the world right here on campus.</p>
+            <div class="post-media">
+                <img src="https://via.placeholder.com/600x400" alt="Food Fest">
+            </div>
+            <p class="post-date-time">24 Sep 2024, 13:00</p>
+            <p class="like-counter">0 </p>
+            <i class="fas fa-heart like-heart"></i>
+        </div>
+
+        <!-- Post 5 -->
+        <div class="post" ondblclick="likePost(this)">
+            <h2 class="post-title">Film Screening: The Social Network</h2>
+            <p class="post-description">Come and watch this critically acclaimed movie with your peers.</p>
+            <div class="post-media">
+                <img src="https://via.placeholder.com/600x400" alt="Film Screening">
+            </div>
+            <p class="post-date-time">23 Sep 2024, 18:00</p>
+            <p class="like-counter">0 </p>
+            <i class="fas fa-heart like-heart"></i>
+        </div>
+
+        <!-- Post 6 -->
+        <div class="post" ondblclick="likePost(this)">
+            <h2 class="post-title">University Marathon</h2>
+            <p class="post-description">Are you ready to run? Join the university marathon this weekend!</p>
+            <div class="post-media">
+                <img src="https://via.placeholder.com/600x400" alt="University Marathon">
+            </div>
+            <p class="post-date-time">22 Sep 2024, 06:00</p>
+            <p class="like-counter"><i class="fas fa-heart like-heart"></i> 0</p>
+
+        </div>
+
     </div>
+
+    <script>
+        function likePost(postElement) {
+            const heartIcon = postElement.querySelector('.like-heart');
+            const likeCounter = postElement.querySelector('.like-counter');
+            
+            // If the post is already liked, return
+            if (heartIcon.classList.contains('active')) return;
+            
+            // Activate the like heart
+            heartIcon.classList.add('active');
+
+            // Increment the like counter
+            let currentLikes = parseInt(likeCounter.textContent);
+            likeCounter.textContent = `${currentLikes + 1} likes`;
+            
+            // Create heart animation
+            const heartAnimation = document.createElement('i');
+            heartAnimation.classList.add('fas', 'fa-heart', 'like-heart-animation');
+            postElement.appendChild(heartAnimation);
+
+            // Remove animation after it finishes
+            setTimeout(() => {
+                heartAnimation.remove();
+            }, 400);
+        }
+    </script>
 
 </body>
 </html>

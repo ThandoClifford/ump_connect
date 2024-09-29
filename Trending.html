@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trending Now - umpConnect</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: #ffffff;
+            display: flex;
+        }
+
+        /* Side Navigation */
+        .side-nav {
+            height: 100vh;
+            width: 250px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #1e1e1e;
+            padding-top: 20px;
+            overflow-y: auto;
+        }
+
+        .side-nav .logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+        }
+
+        .side-nav img {
+            width: auto;
+            height: 50px;
+        }
+
+        .side-nav .logo-text {
+            font-size: 24px;
+            margin-left: 10px;
+            color: #ffffff;
+        }
+
+        .side-nav input[type="text"] {
+            width: 80%;
+            padding: 10px;
+            margin: 20px 10%;
+            border: none;
+            border-radius: 5px;
+            background-color: #2a2a2a;
+            color: #ffffff;
+        }
+
+        .side-nav input[type="text"]::placeholder {
+            color: #cccccc;
+        }
+
+        .side-nav a {
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 20px;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+        }
+
+        .side-nav a i {
+            margin-right: 10px;
+            color: #00aaff;
+            font-size: 1.2rem;
+        }
+
+        .side-nav a:hover {
+            background-color: #575757;
+            color: #f4f4f4;
+        }
+
+        /* Main Content Area */
+        .main-content {
+            margin-left: 250px;
+            padding: 20px;
+            flex-grow: 1;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        .trending-category {
+            margin-bottom: 30px;
+        }
+
+        .trending-category h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #00aaff;
+        }
+
+        .post {
+            background-color: #1e1e1e;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 15px;
+        }
+
+        .post h3 {
+            font-size: 20px;
+            margin: 0;
+        }
+
+        .post p {
+            font-size: 14px;
+            margin: 5px 0;
+        }
+
+        .post img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+
+        .post .post-info {
+            font-size: 12px;
+            color: #cccccc;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Side Navigation -->
+    <div class="side-nav">
+        <div class="logo-container">
+            <img src="logo.jpeg" alt="University Logo">
+            <span class="logo-text">umpConnect</span>
+        </div>
+        <input type="text" placeholder="Search...">
+        <a href="index.html"><i class="fas fa-home"></i> Home</a>
+        <a href="discover.html"><i class="fas fa-compass"></i> Discover</a>
+        <a href="live.html"><i class="fas fa-video"></i> Live Campus Cam</a>
+        <a href="Trending.html"><i class="fas fa-fire"></i> Trending Now</a>
+        <a href="Competitions.html"><i class="fas fa-gamepad"></i> Challenges & Competitions</a>
+        <a href="Calendar.html"><i class="fas fa-calendar-alt"></i> Events Calendar</a>
+        <a href="tickets.html"><i class="fas fa-ticket-alt"></i> Event Tickets</a>
+        <a href="polls.html"><i class="fas fa-poll"></i> Live Polls & Surveys</a>
+        <a href="jobs.html"><i class="fas fa-briefcase"></i> Jobs & Internships</a>
+        <a href="contact.html"><i class="fas fa-envelope"></i> Contact Us</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <h1>Trending Now</h1>
+
+        <!-- Trending in Sports -->
+        <div class="trending-category">
+            <h2>Trending in Sports</h2>
+            <div class="post">
+                <h3>Basketball Championship Highlights</h3>
+                <p>A recap of the thrilling basketball championship game held last night.</p>
+                <img src="https://source.unsplash.com/random/300x200/?basketball" alt="Basketball">
+                <div class="post-info">5 hours ago - 120 likes</div>
+            </div>
+            <div class="post">
+                <h3>Football Team Wins Tournament</h3>
+                <p>Our university's football team celebrated their victory at the tournament.</p>
+                <img src="https://source.unsplash.com/random/300x200/?football" alt="Football">
+                <div class="post-info">3 hours ago - 95 likes</div>
+            </div>
+        </div>
+
+        <!-- Trending in Academics -->
+        <div class="trending-category">
+            <h2>Trending in Academics</h2>
+            <div class="post">
+                <h3>Research Paper Published</h3>
+                <p>Congratulations to Dr. Smith for publishing his latest research.</p>
+                <img src="https://source.unsplash.com/random/300x200/?research" alt="Research">
+                <div class="post-info">2 days ago - 80 likes</div>
+            </div>
+            <div class="post">
+                <h3>Upcoming Guest Lecture</h3>
+                <p>Join us for a guest lecture on climate change next week.</p>
+                <img src="https://source.unsplash.com/random/300x200/?lecture" alt="Lecture">
+                <div class="post-info">1 day ago - 60 likes</div>
+            </div>
+        </div>
+
+        <!-- Trending in Arts -->
+        <div class="trending-category">
+            <h2>Trending in Arts</h2>
+            <div class="post">
+                <h3>Art Exhibition Opening</h3>
+                <p>Visit the new art exhibition showcasing student artworks.</p>
+                <img src="https://source.unsplash.com/random/300x200/?art" alt="Art Exhibition">
+                <div class="post-info">4 hours ago - 75 likes</div>
+            </div>
+            <div class="post">
+                <h3>Theater Production Auditions</h3>
+                <p>Sign up for auditions for the upcoming theater production!</p>
+                <img src="https://source.unsplash.com/random/300x200/?theater" alt="Theater">
+                <div class="post-info">5 hours ago - 50 likes</div>
+            </div>
+        </div>
+
+        <!-- Trending in Technology -->
+        <div class="trending-category">
+            <h2>Trending in Technology</h2>
+            <div class="post">
+                <h3>Hackathon Results</h3>
+                <p>Check out the winners of this semester's hackathon!</p>
+                <img src="https://source.unsplash.com/random/300x200/?tech" alt="Hackathon">
+                <div class="post-info">6 hours ago - 100 likes</div>
+            </div>
+            <div class="post">
+                <h3>New Tech Club Forming</h3>
+                <p>Interested in technology? Join our new tech club!</p>
+                <img src="https://source.unsplash.com/random/300x200/?coding" alt="Tech Club">
+                <div class="post-info">2 days ago - 70 likes</div>
+            </div>
+        </div>
+
+        <!-- Trending in Social Events -->
+        <div class="trending-category">
+            <h2>Trending in Social Events</h2>
+            <div class="post">
+                <h3>Spring Festival Announcement</h3>
+                <p>The annual Spring Festival is happening next month!</p>
+                <img src="https://source.unsplash.com/random/300x200/?festival" alt="Spring Festival">
+                <div class="post-info">3 hours ago - 120 likes</div>
+            </div>
+            <div class="post">
+                <h3>Charity Run Registration Open</h3>
+                <p>Sign up for the charity run to support local charities!</p>
+                <img src="https://source.unsplash.com/random/300x200/?charity" alt="Charity Run">
+                <div class="post-info">1 day ago - 90 likes</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

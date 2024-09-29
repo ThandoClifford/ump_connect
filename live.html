@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>umpConnect: Breadth of knowledge, at your fingertips</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212; /* Dark background color */
+            color: #ffffff; /* Light text color for contrast */
+            display: flex; /* To handle side navigation and content layout */
+        }
+
+        /* Side Navigation Menu */
+        .side-nav {
+            height: 100vh; /* Full height of the viewport */
+            width: 250px; /* Fixed width */
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #1e1e1e;
+            padding-top: 20px;
+            overflow-y: auto;
+
+        }
+
+        .side-nav .logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+        }
+
+        .side-nav img {
+            margin-left: -10px; /* Shift the logo a bit to the left */
+            width: auto;
+            height: 50px;
+        }
+
+        .side-nav .logo-text {
+            font-size: 24px; /* Same height as the logo */
+            margin-left: 10px; /* Space between logo and text */
+            color: #ffffff;
+        }
+
+        .side-nav input[type="text"] {
+            width: 80%;
+            padding: 10px;
+            margin: 20px 10%;
+            border: none;
+            border-radius: 5px;
+            background-color: #2a2a2a;
+            color: #ffffff;
+        }
+
+        .side-nav input[type="text"]::placeholder {
+            color: #cccccc;
+        }
+
+        .side-nav a {
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 20px;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+        }
+
+        .side-nav a i {
+            margin-right: 10px; /* Space between icon and text */
+            color: #00aaff; /* Blue color for the icon */
+            font-size: 1.2rem; /* Adjust size of the icon */
+        }
+
+        .side-nav a:hover i {
+            color: #ffaa00; /* Orange color on hover */
+        }
+
+        .side-nav a:hover {
+            background-color: #575757;
+            color: #f4f4f4;
+        }
+
+        /* Main Content Area */
+        .main-content {
+            margin-left: 250px; /* Leave space for the side navigation */
+            padding: 20px;
+            flex-grow: 1;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 100px 20px;
+            background-color: #1c1c1c;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #d3d3d3;
+        }
+
+        .hero button {
+            background-color: #f4f4f4;
+            color: #121212;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            margin-top: 20px;
+        }
+
+        .hero button:hover {
+            background-color: #ddd;
+        }
+
+        section {
+            padding: 20px;
+            margin: 20px 0;
+            background-color: #2a2a2a;
+            border-radius: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #1e1e1e;
+            color: #ffffff;
+        }
+
+        /* Responsive Layout */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Side Navigation -->
+    <div class="side-nav">
+        <!-- Logo Section with Text -->
+        <div class="logo-container">
+            <img src="logo.jpeg" alt="University Logo">
+            <span class="logo-text">umpConnect</span>
+        </div>
+
+    
+
+        <!-- Navigation Links -->
+        <input type="text" placeholder="Search...">
+    <a href="index.html"><i class="fas fa-home"></i> Home</a>
+    <a href="discover.html"><i class="fas fa-compass"></i> Discover</a>
+    <a href="live.html"><i class="fas fa-video"></i> Live Campus Cam</a>
+    <a href="trending.html"><i class="fas fa-fire"></i> Trending Now</a>
+    <a href="competition.html"><i class="fas fa-gamepad"></i> Challenges & Competitions</a>
+    <a href="calender.html"><i class="fas fa-calendar-alt"></i> Events Calendar</a>
+    <a href="tickets.html"><i class="fas fa-ticket-alt"></i> Event Tickets</a>
+    <a href="polls.html"><i class="fas fa-poll"></i> Live Polls & Surveys</a>
+    <a href="jobs.html"><i class="fas fa-briefcase"></i> Jobs & Internships</a>
+    <a href="contact.html"><i class="fas fa-envelope"></i> Contact Us</a>
+
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1>Welcome to the University Central System</h1>
+            <p>Your gateway to university life, events, and broadcasts.</p>
+            <button>Watch Live Broadcast</button>
+        </section>
+
+        <!-- Sample Section -->
+        <section id="broadcasts">
+            <h2>Live & Upcoming Broadcasts</h2>
+            <p>Catch all the latest university events live here.</p>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2024 University Central System. All Rights Reserved.</p>
+        </footer>
+    </div>
+        
+</body>
+</html>
